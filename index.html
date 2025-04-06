@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberStyle - Barbearia Profissional</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-black bg-opacity-90 text-white z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold">BarberStyle</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="hover:text-yellow-500 transition">Início</a>
+                    <a href="/pages/portfolio.html" class="hover:text-yellow-500 transition">Portfólio</a>
+                    <a href="/pages/appointment.html" class="hover:text-yellow-500 transition">Agendamento</a>
+                    <a href="#contact" class="hover:text-yellow-500 transition">Contato</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920" 
+                 alt="Barbearia" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+        <div class="relative container mx-auto px-6 h-full flex items-center">
+            <div class="text-white max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Experiência e Estilo em Cada Corte</h1>
+                <p class="text-xl mb-8">Transforme seu visual com os melhores profissionais da cidade.</p>
+                <a href="/pages/appointment.html" 
+                   class="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300 inline-block">
+                    Agende Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800" 
+                         alt="Nosso Espaço" 
+                         class="rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Sobre Nós</h2>
+                    <p class="text-gray-600 mb-6">
+                        Com mais de 10 anos de experiência, nossa barbearia se destaca pela excelência em serviços e atendimento personalizado. 
+                        Nossos profissionais são especialistas em diversos estilos de corte, barba e tratamentos capilares.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <i class="fas fa-cut text-3xl text-yellow-500 mb-3"></i>
+                            <h3 class="font-semibold">Cortes Modernos</h3>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <i class="fas fa-beard text-3xl text-yellow-500 mb-3"></i>
+                            <h3 class="font-semibold">Barba Profissional</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Nossos Serviços</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-cut text-3xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Corte de Cabelo</h3>
+                    <p class="text-gray-600">Cortes modernos e clássicos para todos os estilos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-beard text-3xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Barba</h3>
+                    <p class="text-gray-600">Modelagem e tratamento completo para sua barba.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-spray-can text-3xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Tratamentos</h3>
+                    <p class="text-gray-600">Hidratação e cuidados especiais para seus cabelos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Nosso Trabalho</h2>
+                <p class="text-gray-600">Confira alguns dos nossos melhores cortes e estilos</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=600" 
+                     alt="Corte Moderno 1" 
+                     class="rounded-lg shadow-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=600" 
+                     alt="Corte Moderno 2" 
+                     class="rounded-lg shadow-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1620385019253-b051a26048ce?auto=format&fit=crop&w=600" 
+                     alt="Corte Moderno 3" 
+                     class="rounded-lg shadow-lg hover:opacity-90 transition">
+            </div>
+            <div class="text-center mt-8">
+                <a href="/pages/portfolio.html" 
+                   class="inline-block bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition">
+                    Ver Portfólio Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Contato</h2>
+                    <p class="mb-8">Entre em contato conosco ou nos visite para uma experiência única.</p>
+                    <div class="space-y-4">
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt w-8"></i>
+                            Rua da Barbearia, 123 - Centro
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone w-8"></i>
+                            (11) 99999-9999
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope w-8"></i>
+                            contato@barberstyle.com
+                        </p>
+                    </div>
+                    <div class="mt-8 space-x-4">
+                        <a href="#" class="text-2xl hover:text-yellow-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-yellow-500 transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-yellow-500 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Horário de Funcionamento</h3>
+                    <div class="space-y-3">
+                        <p class="flex justify-between">
+                            <span>Segunda - Sexta</span>
+                            <span>09:00 - 20:00</span>
+                        </p>
+                        <p class="flex justify-between">
+                            <span>Sábado</span>
+                            <span>09:00 - 18:00</span>
+                        </p>
+                        <p class="flex justify-between">
+                            <span>Domingo</span>
+                            <span>Fechado</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 BarberStyle. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Main JavaScript -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
